@@ -14,6 +14,6 @@ and fragments.
 - Koin for dependency injection
 - Retrofit 2 for network requests
 - Coroutines for making network requests
-- Picasso for loading images
+- Glide for loading images
 - Timber for logging
 - Moshi for JSON’s activities
