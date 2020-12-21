@@ -60,7 +60,6 @@ class ChannelsFragment : Fragment() {
 
         channelsFragmentBinding.btClear.setOnClickListener {
             (channelsFragmentBinding.rvChannels.adapter as ChannelsAdapter).clearSelection()
-            viewModel.clearSelectedChannels()
             viewModel.clearCampaigns()
             setFabVisibility()
         }
