@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main_container"
+    android:label="@string/main"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.claudiuluca.ingtest.ui.main.MainFragment"
+        android:label="@string/main"
+        tools:layout="@layout/main_fragment">
+        <action
+            android:id="@+id/action_mainFragment_to_channelsFragment"
+            app:destination="@id/channelsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_reviewFragment"
+            app:destination="@id/reviewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />/>
+    </fragment>
+    <fragment
+        android:id="@+id/channelsFragment"
+        android:name="com.claudiuluca.ingtest.ui.main.ChannelsFragment"
+        android:label="@string/channels_title"
+        tools:layout="@layout/channels_fragment">
+        <action
+            android:id="@+id/action_channelsFragment_to_campaignsFragment"
+            app:destination="@id/campaignsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />/>
+        <action
+            android:id="@+id/action_channelsFragment_to_reviewFragment"
+            app:destination="@id/reviewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />/>
+    </fragment>
+    <fragment
+        android:id="@+id/campaignsFragment"
+        android:name="com.claudiuluca.ingtest.ui.main.CampaignsFragment"
+        android:label="@string/available_campaigns"
+        tools:layout="@layout/campaigns_fragment">
+        <argument
+            android:name="target"
+            app:argType="string" />
+        <argument
+            android:name="channel"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewFragment"
+        android:name="com.claudiuluca.ingtest.ui.main.ReviewFragment"
+        android:label="@string/review"
+        tools:layout="@layout/review_fragment" />
+
+</navigation>

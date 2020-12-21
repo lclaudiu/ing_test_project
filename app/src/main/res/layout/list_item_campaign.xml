@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="campaign"
+            type="com.claudiuluca.ingtest.data.api.Campaign" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_marginBottom="@dimen/medium_margin"
+        android:checkable="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="@{clickListener}"
+        android:padding="8dp"
+        app:cardElevation="@dimen/card_elevation"
+        app:cardPreventCornerOverlap="false"
+        app:shapeAppearanceOverlay="@style/CardShapeAppearance">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvPriceLabel"
+                style="@style/CardTitleStyle"
+                android:text="@string/price"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                style="@style/CardTitleStyle"
+                android:text="@{campaign.price}"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toEndOf="@+id/tvPriceLabel"
+                app:layout_constraintTop_toTopOf="@+id/tvPriceLabel"
+                tools:text="234 EUR" />
+
+            <View
+                android:id="@+id/vSeparator"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_margin="@dimen/medium_margin"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPriceLabel" />
+
+            <TextView
+                android:id="@+id/tvTargetLabel"
+                style="@style/SubTitleStyle"
+                android:text="@string/includes"
+                app:layout_constraintStart_toStartOf="@+id/vSeparator"
+                app:layout_constraintTop_toBottomOf="@+id/vSeparator" />
+
+            <TextView
+                android:id="@+id/tvChannels"
+                style="@style/SubInfoStyle"
+                android:textAllCaps="false"
+                app:campaignsDetails="@{campaign.details}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvTargetLabel"
+                app:layout_constraintTop_toTopOf="@+id/tvTargetLabel"
+                tools:text="3-8 listings" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ING Test</string>
+
+    <string name="main">Main</string>
+    <string name="channels_title">Channels</string>
+    <string name="channels">Channels:</string>
+    <string name="channel">Channel:</string>
+    <string name="target">Target:</string>
+    <string name="show_channels">Show channels</string>
+    <string name="clear_selection">Clear selection</string>
+    <string name="please_make_a_selection">Please make a selection</string>
+    <string name="select">Select</string>
+    <string name="available_campaigns">Available campaigns</string>
+    <string name="includes">Includes:</string>
+    <string name="price">Price:</string>
+    <string name="send_email">Send email</string>
+    <string name="review">Review:</string>
+</resources>

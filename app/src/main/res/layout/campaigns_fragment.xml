@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+        <import type="java.util.List"/>
+        <import type="com.claudiuluca.ingtest.data.api.Campaign"/>
+
+        <variable
+            name="campaigns"
+            type="List&lt;Campaign>" />
+
+        <variable
+            name="channel"
+            type="String" />
+
+        <variable
+            name="viewmodel"
+            type="com.claudiuluca.ingtest.ui.main.MainViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.CampaignsFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCampaigns"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:clipToPadding="false"
+            app:items="@{campaigns}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/btClear"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:itemCount="30"
+            tools:listitem="@layout/list_item_campaign" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btSelect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:text="@string/select"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btClear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/medium_margin"
+            android:text="@string/clear_selection"
+            app:layout_constraintBottom_toTopOf="@+id/btSelect"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

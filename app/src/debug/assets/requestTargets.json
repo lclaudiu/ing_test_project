@@ -1,0 +1,111 @@
+{
+  "targeting_specifics": [
+    {
+      "title": "Location",
+      "channels": [
+        "Facebook",
+        "Linkedin",
+        "Twitter",
+        "Instagram",
+        "Google AdWords"
+      ]
+    },
+    {
+      "title": "Age",
+      "channels": [
+        "Facebook",
+        "Linkedin",
+        "Twitter",
+        "Instagram",
+        "Google AdWords"
+      ]
+    },
+    {
+      "title": "Sex",
+      "channels": [
+        "Facebook",
+        "Linkedin",
+        "Twitter",
+        "Instagram",
+        "Google AdWords"
+      ]
+    },
+    {
+      "title": "Spoken languages",
+      "channels": [
+        "Facebook",
+        "Twitter",
+        "Instagram"
+      ]
+    },
+    {
+      "title": "Events",
+      "channels": [
+        "Facebook",
+        "Twitter"
+      ]
+    },
+    {
+      "title": "Company",
+      "channels": [
+        "Linkedin"
+      ]
+    },
+    {
+      "title": "Industry",
+      "channels": [
+        "Linkedin",
+        "SEO"
+      ]
+    },
+    {
+      "title": "Expertise",
+      "channels": [
+        "Linkedin"
+      ]
+    },
+    {
+      "title": "Education",
+      "channels": [
+        "Linkedin"
+      ]
+    },
+    {
+      "title": "Technology",
+      "channels": [
+        "Twitter"
+      ]
+    },
+    {
+      "title": "Interests",
+      "channels": [
+        "Instagram"
+      ]
+    },
+    {
+      "title": "Device",
+      "channels": [
+        "Google AdWords"
+      ]
+    },
+    {
+      "title": "Keywords",
+      "channels": [
+        "Google AdWords",
+        "SEO"
+      ]
+    },
+    {
+      "title": "Similar products / services",
+      "channels": [
+        "Google AdWords"
+      ]
+    },
+    {
+      "title": "Hyperlinks",
+      "channels": [
+        "SEO"
+      ]
+    }
+  ]
+}

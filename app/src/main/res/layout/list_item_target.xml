@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="target"
+            type="com.claudiuluca.ingtest.data.api.TargetEntity" />
+
+        <!--        <variable-->
+        <!--            name="viewModel"-->
+        <!--            type="com.claudiu.android.allcountries.ui.main.MainViewModel" />-->
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_marginBottom="@dimen/medium_margin"
+        android:checkable="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="@{clickListener}"
+        android:padding="8dp"
+        app:cardElevation="@dimen/card_elevation"
+        app:cardPreventCornerOverlap="false"
+        app:shapeAppearanceOverlay="@style/CardShapeAppearance">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/logo_height"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_target"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/ic_target" />
+
+            <TextView
+                android:id="@+id/tvTargetName"
+                style="@style/CardTitleStyle"
+                android:text="@{target.title}"
+                app:layout_constraintBottom_toBottomOf="@+id/ivLogo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivLogo"
+                app:layout_constraintTop_toTopOf="@id/ivLogo"
+                tools:text="Location" />
+
+            <TextView
+                android:id="@+id/tvChannelsLabel"
+                style="@style/SubTitleStyle"
+                android:text="@string/channels"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+            <TextView
+                android:id="@+id/tvChannels"
+                style="@style/SubInfoStyle"
+                app:channelsNames="@{target.channels}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvChannelsLabel"
+                app:layout_constraintTop_toTopOf="@+id/tvChannelsLabel"
+                tools:text="Facebook, Twitter" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
