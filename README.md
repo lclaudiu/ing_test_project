@@ -1,5 +1,3 @@
-  This demo applications let's the user calculate the value of different currencies based on the exchange rates provided by a server each second. 
-
 ### Informations about architecture
 The app is based on the MVVM pattern and the recommended structure from Google: 
 
